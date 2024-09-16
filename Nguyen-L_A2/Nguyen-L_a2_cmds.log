@@ -1,0 +1,48 @@
+  409  cd CS131_fa24_datafiles/
+  410  cd Lec02/
+  411  grep -c goodluck.txt 
+  412  grep -c "Good luck, babe " goodluck.txt 
+  413  wc -l goodluck.txt 
+  414  grep -c "Good luck, babe " goodluck.txt | wc -w 
+  415  grep -c -w "Good luck, babe " goodluck.txt | wc -w
+  416  cat -n goodluck.txt 
+  417  grep "Good luck, babe " goodluck.txt | wc -w
+  418  grep "Good luck, babe " goodluck.txt | wc -c -w
+  419  grep "Good luck, babe " goodluck.txt 
+  420  grep -n "Good luck, babe " goodluck.txt | wc -w
+  421  grep -c "Good luck, babe " goodluck.txt | wc -w
+  422  grep -c "Good luck, babe " goodluck.txt 
+  423  man grep
+  424  grep -n "Good luck, babe " goodluck.txt 
+  425  grep "Good luck, babe " goodluck.txt | wc -n -w
+  426  man wc
+  427  grep -n "Good luck, babe " goodluck.txt
+  428  |
+  429  >>
+  430  grep -n "Good luck, babe " goodluck.txt |
+  431  grep -n "Good luck, babe " goodluck.txt >> Nguyen-Lila_a2_counts.txt 
+  432  vi Nguyen-Lila_a2_counts.txt 
+  433  grep -n "Good luck, babe " goodluck.txt | wc -w
+  434  grep -n "Good luck, babe " goodluck.txt | wc -w |
+  435  grep -n "Good luck, babe " goodluck.txt | wc -w >> Nguyen-Lila_a2_counts.txt 
+  436  vi Nguyen-Lila_a2_counts.txt 
+  437  clear
+  438  vi Nguyen-Lila_a2_counts.txt 
+  439  ls
+  440  cd CS131_fa24_datafiles/
+  441  cd Lec02/
+  442  cat -n goodluck.txt 
+  443  grep "wor" goodluck.txt 
+  444  grep "dred" goodluck.txt 
+  445  grep "Good luck, babe " goodluck.txt 
+  446  grep -n "Good luck, babe " goodluck.txt 
+  447  >> Nguyen-Lila_a2_counts.txt
+  448  vi Nguyen-Lila_a2_counts.txt 
+  449  grep -n "Good luck, babe " goodluck.txt >> Nguyen-Lila_a2_counts.txt
+  450  vi Nguyen-Lila_a2_counts.txt 
+  451  grep -n "Good luck, babe " goodluck.txt | wc -l
+  452  grep -n "Good luck, babe " goodluck.txt | wc -l -w
+  453  grep -n "Good luck, babe " goodluck.txt | wc -l -w >> Nguyen-Lila_a2_counts.txt 
+  454  vi Nguyen-Lila_a2_counts.txt 
+  455  history > <Nguyen-Lila_a2_cmds.log
+  456  history > Nguyen-Lila_a2_cmds.log

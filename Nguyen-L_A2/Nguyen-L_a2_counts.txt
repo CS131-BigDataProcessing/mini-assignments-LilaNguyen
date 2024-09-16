@@ -1,0 +1,10 @@
+The following output represents the lines that contain "Good luck, babe ".
+15:Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
+17:Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
+30:Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
+32:Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
+44:Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
+46:Good luck, babe (well, good luck), well, good luck, babe (well, good luck)
+
+The following output represents the line counts (6) and word counts (78) of the lines that contain "Good luck, babe "-- in other words, there are 6 lines that contain "Good luck, babe " and a total of 78 words in those 6 lines.
+      6      78
