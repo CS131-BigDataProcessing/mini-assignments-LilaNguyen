@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Activity 1: Age
+# Categorize someone based on their age
+
 AGE=$1
 CHILD_CAP=13
 TEEN_CAP=20

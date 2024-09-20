@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Activity 2: Temperature in California
+# Write a script to ask if it's hot or cold today, based on the weather.
+
 TEMP=$1
 FREEZING_CAP=67
 HOT_CAP=85
