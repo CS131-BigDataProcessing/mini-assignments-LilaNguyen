@@ -1,0 +1,14 @@
+  934  awk -F, '{ print $4 }' airline_stats.csv | sort | uniq
+  935  vi airline_inquiry.txt 
+  936  awk -F, '$1 > 10 { print $4 }' airline_stats.csv | sort | uniq
+  947  awk -F, '{ print $4 }' airline_stats.csv | sort | uniq >> airline_inquiry.txt 
+  948  vi airline_inquiry.txt
+  952  threshold_value=15
+  955  awk -v Threshold="$threshold_value" -F, '{ if ($1 > Threshold) print $4 }' airline_stats.csv | sort | uniq
+  956  awk -v Threshold="$threshold_value" -F, '{ if ($1 > Threshold) print $4 }' airline_stats.csv | sort | uniq >> airline_inquiry.txt 
+  958  awk -v Threshold=15 -F, '{ if ($1 > Threshold) print $4 }' airline_stats.csv | sort | uniq
+  959  threshold_value=15
+  960  awk -F, -v threshold="$threshold_value" '{ if ($1 > threshold) print $4 }' airline_stats.csv | sort | uniq
+  961  awk -F, -v threshold="$threshold_value" '{ if ($1 > threshold) print $4 }' airline_stats.csv | sort | uniq >> airline_inquiry.txt 
+  962  vi airline_inquiry.txt 
+  981  history > a6_cmds.log

@@ -1,0 +1,40 @@
+# 1. What are all the airlines? What awk command did you use to get this information?
+
+"airline"
+"Alaska"
+"American"
+"Delta"
+"Jet Blue"
+"Southwest"
+"United"
+
+Command used: awk -F, '{ print $4 }' airline_stats.csv | sort | uniq
+
+
+# 2. Which airline has a carrier delay greater than a certain threshold?
+## a. Threshold = 10 (sort alphabetically)
+
+"Alaska"
+"American"
+"Delta"
+"Jet Blue"
+"Southwest"
+"United"
+
+Command used: awk -F, '$1 > 10 { print $4 }' airline_stats.csv | sort | uniq >> airline_inquiry.txt
+ 
+
+## b. Threshold = 15 (sort alphabetically)
+
+"Alaska"
+"American"
+"Delta"
+"Jet Blue"
+"Southwest"
+"United"
+
+Commands used: 
+threshold_value=15
+awk -v Threshold="$threshold_value" -F, '{ if ($1 > Threshold) print $4 }' airline_stats.csv | sort | uniq >> airline_inquiry.txt
+
+I also tried the following and got the same output: awk -v Threshold=15 -F, '{ if ($1 > Threshold) print $4 }' airline_stats.csv | sort | uniq  
