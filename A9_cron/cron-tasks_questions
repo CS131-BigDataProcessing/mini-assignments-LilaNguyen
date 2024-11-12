@@ -1,0 +1,7 @@
+a) What other types of tasks (provide 2) could benefit from automation using cron or at?
+1. Checking for software updates
+2. Cleaning up an Eclipse project folder (i.e., removing all non-source code files)
+
+b) What potential risks are there with poorly managed automated tasks, and how can you avoid them (e.g., ensuring backups work correctly)?
+1. Data loss; can avoid by testing scripts before automation (can run the script on a tempdir with fake data)
+2. Cron jobs that do the same task at the same time can result in conflicts; can avoid by scheduling similar tasks at different times
