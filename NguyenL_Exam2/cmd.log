@@ -1,0 +1,16 @@
+ 1017  head -n 25 server_log.csv 
+ 1018  awk -F, '$2 > 400 { print $0 }' server_log.csv >> User_ID_gt_400.txt
+ 1020  cat User_ID_gt_400.txt 
+ 1029* awk -F, 'tolower($4) ~ /backup failed/' server_log.csv > error_backup_failed.txt
+ 1030  cat error_backup_failed.txt 
+ 1031  head -n 25 house_sales.csv 
+ 1039  awk -F\t' '{sum += $2; count++} END {if (count > 0) print "Average sale price:", sum / count}' house_sales.csv
+ 1042  awk -F'\t' '{sum += $3; count++} END {if (count > 0) print "Average sale price:", sum / count}' house_sales.csv
+ 1054  sed 's/NULL/N\/A/g' server_log.csv > cleaned_server_log.csv
+ 1055  cat cleaned_server_log.csv
+ 1056  sed '/NULL/ d' server_log.csv > server_log_remove_null.csv
+ 1057  wc -l server_log_remove_null.csv 
+ 1058  cat server_log_remove_null.csv 
+ 1059  sed 's/\t/,/g' house_sales.csv > house_comma_separated.csv
+ 1060  cat house_comma_separated.csv 
+ 1061  history

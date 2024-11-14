@@ -22,8 +22,9 @@ mathvar1=$[1+5]
 mathvar2=$[mathvar1*20]
 mathvar3=10
 mathvar4=$[mathvar1*(mathvar2+mathvar3)]
+mathvar5=$[$mathvar1*($mathvar2+$mathvar3)]
 echo "Variable 1 is $mathvar1. Variable 2 is $mathvar2. Using $mathvar3 for Variable 3, our final Variable 4 is $mathvar4."
-
+echo "Variable 5 is $mathvar5"
 
 # Activity 4: More math. Working with floating-point solution
 ## using variable=$(echo "options; expression" | bc)
