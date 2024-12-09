@@ -18,12 +18,19 @@ class TestValidateFunctions(unittest.TestCase):
             'Vict age': [20, 30, 40]
         })
 
+        # Invalid data type
+        invalid_type_df = pd.DataFrame({
+            'Vict sex': [1, 2, 'F'],
+            'Vict age': [20, 30, 40]
+        })
+
         # Empty case
         empty_df = pd.DataFrame()
 
         # Test cases
         self.assertTrue(validate_vict_sex(valid_df))
-        self.assertTrue(validate_vict_sex(invalid_df))
+        self.assertFalse(validate_vict_sex(invalid_df))
+        self.assertFalse(validate_vict_sex(invalid_type_df))
         self.assertTrue(validate_vict_sex(empty_df))
 
 
@@ -46,6 +53,12 @@ class TestValidateFunctions(unittest.TestCase):
             'Vict age': [-5, 100, 150]
         })
 
+        # Invalid data type
+        invalid_type_df = pd.DataFrame({
+            'Vict sex': ['M', 'F', 'F'],
+            'Vict age': [20, 'thirty-one', 40]
+        })
+
         # Missing 'Vict age' column
         missing_df = pd.DataFrame({
             'Vict sex': ['M', 'F', 'F'],
@@ -53,13 +66,13 @@ class TestValidateFunctions(unittest.TestCase):
 
         # Test cases
         self.assertTrue(validate_vict_age(valid_df))
-        self.assertTrue(validate_vict_age(invalid_df))
-        self.assertTrue(validate_vict_age(invalid2_df))
-        self.assertTrue(validate_vict_age(missing_df))
-
+        self.assertFalse(validate_vict_age(invalid_df))
+        self.assertFalse(validate_vict_age(invalid2_df))
+        self.assertFalse(validate_vict_age(invalid_type_df))
+        self.assertTrue(validate_vict_sex(empty_df))
 
 class TestStatsFunction(unittest.TestCase):
-    def test_mean_age:
+    def test_mean_age(self):
         # Proper columns
         valid_df = pd.DataFrame({'Vict age': [20, 30, 40]})
 
@@ -74,7 +87,7 @@ class TestStatsFunction(unittest.TestCase):
         self.assertEqual(mean_age(one_df), 40)
         self.assertEqual(mean_age(neg_df), -20)
     
-    def test_median_age:
+    def test_median_age(self):
         # Proper columns
         valid_df = pd.DataFrame({'Vict age': [20, 30, 40]})
 
@@ -82,7 +95,7 @@ class TestStatsFunction(unittest.TestCase):
         same_df = pd.DataFrame({'Vict age': [40, 40, 40]})
 
         # One value
-        one_df = pd.DataFrame({'Vict age:': [40]})
+        one_df = pd.DataFrame({'Vict age': [40]})
 
         # Test cases
         self.assertEqual(median_age(valid_df), 30)
